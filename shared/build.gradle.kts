@@ -5,18 +5,17 @@ plugins {
 }
 
 kotlin {
-    androidTarget {
-        compilations.all {
-            kotlinOptions {
-                jvmTarget = "17"
-            }
-        }
-    }
-    
+//    androidTarget {
+//        compilations.all {
+//            kotlinOptions {
+//                jvmTarget = "17"
+//            }
+//        }
+//    }
+    androidTarget()
+
     listOf(
         iosX64(),
-        iosArm64(),
-        iosSimulatorArm64()
     ).forEach {
         it.binaries.framework {
             baseName = "shared"

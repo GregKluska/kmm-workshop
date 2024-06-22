@@ -9,6 +9,8 @@ compose = "1.6.8"
 compose-material3 = "1.2.1"
 androidx-activityCompose = "1.9.0"
 ktor = "2.3.11"
+spotless = "6.25.0"
+detekt = "1.23.6"
 
 [libraries]
 kotlin-test = { group = "org.jetbrains.kotlin", name="kotlin-test", version.ref = "kotlin" }
@@ -25,6 +27,12 @@ kotlin-inject-runtime-kmp = { group = "me.tatarka.inject", name = "kotlin-inject
 ktor-client-core = { group = "io.ktor", name="ktor-client-core", version.ref = "ktor" }
 ktor-client-okhttp = { group = "io.ktor", name="ktor-client-okhttp", version.ref = "ktor" }
 ktor-client-darwin = { group = "io.ktor", name="ktor-client-darwin", version.ref = "ktor" }
+
+# For Convention Plugins
+android-gradlePlugin = { group = "com.android.tools.build", name = "gradle", version.ref = "agp" }
+kotlin-gradlePlugin = { group = "org.jetbrains.kotlin", name = "kotlin-gradle-plugin", version.ref = "kotlin" }
+spotless-gradlePlugin = { group = "com.diffplug.spotless", name = "spotless-plugin-gradle", version.ref = "spotless" }
+detekt-gradlePlugin = { group = "io.gitlab.arturbosch.detekt", name = "detekt-gradle-plugin", version.ref = "detekt" }
 
 [plugins]
 androidApplication = { id = "com.android.application", version.ref = "agp" }
