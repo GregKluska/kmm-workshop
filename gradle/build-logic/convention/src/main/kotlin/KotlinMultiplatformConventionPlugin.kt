@@ -1,6 +1,5 @@
-import com.gregkluska.gradle.LibsPlugin
-import com.gregkluska.gradle.findPluginId
-import com.gregkluska.gradle.libs
+import com.gregkluska.gradle.configureDetekt
+import com.gregkluska.gradle.configureKotlin
 import org.gradle.api.Plugin
 import org.gradle.api.Project
 import org.gradle.kotlin.dsl.configure
@@ -9,17 +8,22 @@ import org.jetbrains.kotlin.gradle.dsl.KotlinMultiplatformExtension
 class KotlinMultiplatformConventionPlugin : Plugin<Project> {
     override fun apply(target: Project) = with(target) {
         with(pluginManager) {
-            apply(libs.findPluginId(LibsPlugin.KotlinMultiplatform))
+            apply("org.jetbrains.kotlin.multiplatform")
         }
 
         kotlin {
-            if (pluginManager.hasPlugin("")) {
+            jvm()
+
+            if (pluginManager.hasPlugin("com.android.library")) {
                 androidTarget()
             }
 
             iosArm64()
             iosSimulatorArm64()
         }
+
+        configureKotlin()
+        configureDetekt()
     }
 }
 

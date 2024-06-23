@@ -9,7 +9,7 @@ import org.gradle.kotlin.dsl.named
 
 internal fun Project.configureDetekt() {
     with(pluginManager) {
-        apply(libs.findPlugin("detekt").get().get().pluginId)
+        apply("io.gitlab.arturbosch.detekt")
     }
 
     detekt {

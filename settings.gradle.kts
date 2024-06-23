@@ -15,6 +15,7 @@ dependencyResolutionManagement {
     }
 }
 
-rootProject.name = "KMM_Workshop"
+rootProject.name = "KMM-Workshop"
 include(":androidApp")
 include(":shared")
+include(":api:spotify")

@@ -5,13 +5,6 @@ import org.gradle.api.tasks.Copy
 
 class RootConventionPlugin : Plugin<Project> {
     override fun apply(target: Project) = with(target) {
-
-        tasks.register("install", Copy::class.java) {
-            from("${rootDir}/scripts/pre-commit")
-            into("${rootDir}/.git/hooks")
-        }
-
-//        configureSpotless()
         configureDetekt()
     }
 }

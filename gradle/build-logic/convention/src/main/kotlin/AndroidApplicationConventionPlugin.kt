@@ -11,8 +11,7 @@ class AndroidApplicationConventionPlugin : Plugin<Project> {
 
     override fun apply(target: Project) = with(target) {
         with(pluginManager) {
-            apply(libs.findPlugin("android-application").get().get().pluginId)
-            apply(libs.findPlugin("jetbrains-kotlin-android").get().get().pluginId)
+            apply("com.android.application")
         }
 
         extensions.configure<ApplicationExtension> {
@@ -22,9 +21,6 @@ class AndroidApplicationConventionPlugin : Plugin<Project> {
                 targetSdk = Versions.TARGET_SDK
             }
         }
-
-//        configureSpotless()
-        configureDetekt()
     }
 
 }

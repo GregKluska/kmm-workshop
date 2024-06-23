@@ -13,7 +13,5 @@ internal fun Project.configureAndroidCommon(
             minSdk = Versions.MIN_SDK
             testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
         }
-
-        configureKotlin()
     }
 }
