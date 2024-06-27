@@ -12,6 +12,7 @@ class KotlinMultiplatformConventionPlugin : Plugin<Project> {
         }
 
         kotlin {
+            applyDefaultHierarchyTemplate()
             jvm()
 
             if (pluginManager.hasPlugin("com.android.library")) {
@@ -20,6 +21,16 @@ class KotlinMultiplatformConventionPlugin : Plugin<Project> {
 
             iosArm64()
             iosSimulatorArm64()
+
+            targets.configureEach {
+                compilations.configureEach {
+                    compileTaskProvider.configure {
+                        compilerOptions {
+                            freeCompilerArgs.add("-Xexpect-actual-classes")
+                        }
+                    }
+                }
+            }
         }
 
         configureKotlin()

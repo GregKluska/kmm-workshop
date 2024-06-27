@@ -18,4 +18,4 @@ dependencyResolutionManagement {
 rootProject.name = "KMM-Workshop"
 include(":androidApp")
 include(":shared")
-include(":api:spotify")
+include(":api:homeassistant")

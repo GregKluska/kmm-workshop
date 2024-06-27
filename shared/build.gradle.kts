@@ -17,10 +17,10 @@ kotlin {
     listOf(
         iosX64(),
     ).forEach {
-        it.binaries.framework {
-            baseName = "shared"
-            isStatic = true
-        }
+//        it.binaries.framework {
+//            baseName = "shared"
+//            isStatic = true
+//        }
     }
 
     sourceSets {

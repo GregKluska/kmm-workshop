@@ -38,30 +38,22 @@ gradlePlugin {
             implementationClass = "AndroidApplicationConventionPlugin"
         }
 
-        register("AndroidApplicationComposeConventionPlugin") {
-            id = "workshop.gradle.android.application.compose"
-            implementationClass = "AndroidApplicationComposeConventionPlugin"
-        }
-
         register("AndroidLibraryConventionPlugin") {
             id = "workshop.gradle.android.library"
             implementationClass = "AndroidLibraryConventionPlugin"
         }
 
-        register("AndroidLibraryComposeConventionPlugin") {
-            id = "workshop.gradle.android.library.compose"
-            implementationClass = "AndroidLibraryComposeConventionPlugin"
+        register("KotlinAndroidConventionPlugin") {
+            id = "workshop.gradle.kotlin.android"
+            implementationClass = "KotlinAndroidConventionPlugin"
         }
 
-        register("AndroidHiltConventionPlugin") {
-            id = "workshop.gradle.android.hilt"
-            implementationClass = "AndroidHiltConventionPlugin"
+
+        register("KotlinMultiplatformConventionPlugin") {
+            id = "workshop.gradle.kotlin.multiplatform"
+            implementationClass = "KotlinMultiplatformConventionPlugin"
         }
 
-        register("JvmLibraryConventionPlugin") {
-            id = "workshop.gradle.jvm.library"
-            implementationClass = "JvmLibraryConventionPlugin"
-        }
     }
 }
 //TODO: Fix it below

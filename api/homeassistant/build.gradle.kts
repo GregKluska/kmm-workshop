@@ -1,13 +1,8 @@
 plugins {
-    alias(libs.plugins.kotlin.multiplatform)
+    id("workshop.gradle.kotlin.multiplatform")
 }
 
 kotlin {
-
-    jvm()
-    iosArm64()
-    iosSimulatorArm64()
-
     sourceSets {
         commonMain.dependencies {
             implementation(libs.ktor.client.core)
@@ -19,11 +14,5 @@ kotlin {
         iosMain.dependencies {
             implementation(libs.ktor.client.darwin)
         }
-    }
-}
-
-java {
-    toolchain {
-        languageVersion.set(JavaLanguageVersion.of(17))
     }
 }
